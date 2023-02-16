@@ -15,8 +15,7 @@ fn verify() -> &'static str {
 }
 
 fn main() {
-    rocket::ignite()
-    .mount("/", routes![hello])
-    .mount("/loaderio-8f747818022b458427567324f00e2493", routes![verify])
+    rocket::build()
+    .mount("/", routes![hello, verify])
     .launch();
 }
