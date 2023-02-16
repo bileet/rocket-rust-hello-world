@@ -15,7 +15,7 @@ fn verify() -> &'static str {
 }
 
 fn main() {
-    rocket::build()
+    rocket::ignite()
     .mount("/", routes![hello, verify])
     .launch();
 }
